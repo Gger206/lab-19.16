@@ -6,7 +6,6 @@ set(CMAKE_C_STANDARD 11)
 add_executable(lab_19_16 main.c
         matrix.c
         libs/data_structures/matrix/matrix.h
+        main.c
+        main.c
 )
-
-dd_executable(lab_19_16 main.c
-        libs/data_structures/matrix/matrix.h)
