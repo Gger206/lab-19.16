@@ -1,7 +1,6 @@
 "D:\BSTU Shukhov\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=D:/BSTU Shukhov/CLion 2023.3.4/bin/ninja/win/x64/ninja.exe" -G Ninja -S "D:\BSTU Shukhov\LionProjects\lab-19.16" -B "D:\BSTU Shukhov\LionProjects\lab-19.16\cmake-build-debug"
-CMake Error at CMakeLists.txt:7:
-  Parse error.  Expected a command name, got unquoted argument with text
-  "matrix.c".
+CMake Error at CMakeLists.txt:11 (dd_executable):
+  Unknown CMake command "dd_executable".
 
 
 -- Configuring incomplete, errors occurred!
