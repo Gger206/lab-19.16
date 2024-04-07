@@ -536,6 +536,20 @@ void task8() {
     assert(getMinInArea(m1) == 5 && getMinInArea(m2) == 6);
 }
 
+void task9() {
+    int values1[] = {10, 7, 5, 6, 3, 11, 8, 9, 4, 1, 12, 2};
+    int values2[] = {6, 8, 9, 2, 7, 12, 3, 4, 10, 11, 5, 1};
+
+    matrix m1 = createMatrixFromArray(values1, 3, 4);
+    matrix m2 = createMatrixFromArray(values2, 3, 4);
+
+    sortByDistances(m1);
+    sortByDistances(m2);
+
+    assert(m1.values[0][0] == 4 && m1.values[1][0] == 10 && m1.values[2][1] == 11);
+    assert(m2.values[0][0] == 6 && m2.values[1][0] == 7 && m2.values[2][1] == 11);
+}
+
 int main() {
     task1();
     task2();
@@ -545,7 +559,7 @@ int main() {
     task6();
     task7();
     task8();
-    
+    task9();
 
     return 0;
 }
