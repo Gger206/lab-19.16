@@ -500,6 +500,20 @@ void task5() {
     assert(m2.values[0][0] == 1 && m2.values[0][1] == 2 && m2.values[2][1] == 2);
 }
 
+void task6() {
+    int values1[] = {1, 0, 0, 1};
+    int values2[] = {1, 0, 0, 1};
+    int values3[] = {1, 2, 3, 4};
+    int values4[] = {1, 2, 3, 4, 5, 6};
+
+    matrix m1 = createMatrixFromArray(values1, 2, 2);
+    matrix m2 = createMatrixFromArray(values2, 2, 2);
+    matrix m3 = createMatrixFromArray(values3, 2, 2);
+    matrix m4 = createMatrixFromArray(values4, 3, 2);
+
+    assert(isMutuallyInverseMatrices(m1, m2));
+    assert(!isMutuallyInverseMatrices(m3, m4));
+}
 
 int main() {
     task1();
@@ -507,6 +521,7 @@ int main() {
     task3();
     task4();
     task5();
+    task6();
 
 
     return 0;
