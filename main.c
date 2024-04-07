@@ -515,6 +515,17 @@ void task6() {
     assert(!isMutuallyInverseMatrices(m3, m4));
 }
 
+void task7() {
+    int values1[] = {3, 2, 5, 4, 1, 3, 6, 3, 3, 2, 1, 2};
+    int values2[] = {-3, -2, -5, -4, -1, -3, -6, -3};
+
+    matrix m1 = createMatrixFromArray(values1, 3, 4);
+    matrix m2 = createMatrixFromArray(values2, 4, 2);
+
+    assert(findSumOfMaxesOfPseudoDiagonal(m1) == 20);
+    assert(findSumOfMaxesOfPseudoDiagonal(m2) == -9);
+}
+
 int main() {
     task1();
     task2();
@@ -522,6 +533,10 @@ int main() {
     task4();
     task5();
     task6();
+    task7();
+
+
+
 
 
     return 0;
