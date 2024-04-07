@@ -445,8 +445,24 @@ void task1() {
     assert(m3.values[0][0] == 1 && m3.values[0][1] == 0 && m3.values[1][1] == 2);
 }
 
+void task2() {
+    int values1[] = {7, 1, 2, 1, 8, 1, 3, 2, 3};
+    int values2[] = {2, 5, 2, 8, 4, 1, 4, 8, 3, 8, 3, 6, 1, 2, 7, 8};
+
+    matrix m1 = createMatrixFromArray(values1, 3, 3);
+    matrix m2 = createMatrixFromArray(values2, 4, 4);
+
+    insertionSortRowsMatrixByRowCriteria(&m1, getMax);
+    insertionSortRowsMatrixByRowCriteria(&m2, getMax);
+
+    assert(m1.values[0][0] == 3 && m1.values[0][1] == 2 && m1.values[1][1] == 1 && m1.values[2][2] == 1);
+    assert(m2.values[0][0] == 2 && m2.values[0][1] == 5 && m2.values[1][1] == 1 && m2.values[2][0] == 3 &&
+           m2.values[3][1] == 2);
+}
+
 int main() {
     task1();
+    task2();
 
     return 0;
 }
