@@ -644,6 +644,16 @@ void task17() {
     assert(getVectorIndexWithMaxAngle(m1, b) == 2 && getVectorIndexWithMaxAngle(m2, b) == 0);
 }
 
+void task18() {
+    int values1[] = {1,2,3,4};
+    int values2[] = {2,3,4,5,6,7,8,10,12};
+
+    matrix m1 = createMatrixFromArray(values1, 2, 2);
+    matrix m2 = createMatrixFromArray(values2, 3, 3);
+
+    assert(getSpecialScalarProduct(m1, 2) == 22 && getSpecialScalarProduct(m2, 3) == 246);
+}
+
 int main() {
     task1();
     task2();
@@ -661,6 +671,7 @@ int main() {
     task14();
     task16();
     task17();
+    task18();
 
     return 0;
 }
