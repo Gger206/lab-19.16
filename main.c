@@ -570,6 +570,20 @@ void task11() {
     assert(getNSpecialElement(m1) == 2 && getNSpecialElement(m2) == 1);
 }
 
+void task12() {
+    int values1[] = {1, 2, 3, 4, 5, 6, 7, 8, 1};
+    matrix m1 = createMatrixFromArray(values1, 3, 3);
+
+    int values2[] = {1, 2, 1, 4, 5, 0, 7, 8, 1};
+    matrix m2 = createMatrixFromArray(values2, 3, 3);
+
+    swapPenultimateRow(&m1, 0);
+    swapPenultimateRow(&m2, 0);
+
+    assert(m1.values[1][0] == 1 && m1.values[1][1] == 4 && m1.values[1][2] == 7);
+    assert(m2.values[0][1] == 2 && m1.values[1][1] == 4 && m1.values[1][2] == 7);
+}
+
 int main() {
     task1();
     task2();
@@ -582,6 +596,7 @@ int main() {
     task9();
     task10();
     task11();
+    task12();
 
     return 0;
 }
