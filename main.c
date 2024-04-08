@@ -550,6 +550,16 @@ void task9() {
     assert(m2.values[0][0] == 6 && m2.values[1][0] == 7 && m2.values[2][1] == 11);
 }
 
+void task10() {
+    int values1[] = {1, 2, 3, 4, 2, 3, 1, 2, 3};
+    matrix m1 = createMatrixFromArray(values1, 3, 3);
+
+    int values2[] = {1, 1, 1, 1, 1, 1, 1, 1, 1};
+    matrix m2 = createMatrixFromArray(values2, 3, 3);
+
+    assert(countEqClassesByRowsSum(m1) == 1 && countEqClassesByRowsSum(m2) == 1);
+}
+
 int main() {
     task1();
     task2();
@@ -560,6 +570,7 @@ int main() {
     task7();
     task8();
     task9();
+    task10();
 
     return 0;
 }
