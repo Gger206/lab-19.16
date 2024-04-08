@@ -622,6 +622,16 @@ void task14() {
            countZeroRows(m5) == 0);
 }
 
+void task16() {
+    int values1[] = {2, 3, 5, 5,4,6,2,3,8,12,12,12,2,1,2};
+    int values2[] = {2, 3, 3, 6, 12, 8, 9, 1, 1, 3};
+
+    matrix m1 = createMatrixFromArray(values1, 3, 5);
+    matrix m2 = createMatrixFromArray(values2, 3, 3);
+
+    assert(getNSpecialElement2(m1) == 4 && getNSpecialElement2(m2) == 2);
+}
+
 int main() {
     task1();
     task2();
@@ -637,6 +647,7 @@ int main() {
     task12();
     task13();
     task14();
+    task16();
 
     return 0;
 }
