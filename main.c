@@ -632,6 +632,18 @@ void task16() {
     assert(getNSpecialElement2(m1) == 4 && getNSpecialElement2(m2) == 2);
 }
 
+void task17() {
+    int b[] = {1, 2, 3};
+
+    int values1[] = {1, 0,0,0,1,0,0,0,1};
+    int values2[] = {1,2,3,3,2,1,2,3,1};
+
+    matrix m1 = createMatrixFromArray(values1, 3, 3);
+    matrix m2 = createMatrixFromArray(values2, 3, 3);
+
+    assert(getVectorIndexWithMaxAngle(m1, b) == 2 && getVectorIndexWithMaxAngle(m2, b) == 0);
+}
+
 int main() {
     task1();
     task2();
@@ -648,6 +660,7 @@ int main() {
     task13();
     task14();
     task16();
+    task17();
 
     return 0;
 }
