@@ -584,6 +584,27 @@ void task12() {
     assert(m2.values[0][1] == 2 && m1.values[1][1] == 4 && m1.values[1][2] == 7);
 }
 
+void task13() {
+    int values1a[] = {7, 1, 1, 1};
+    int values1b[] = {1,6,2,2};
+    int values1c[] = {5,4,2,3};
+    int values1d[] = {1,3,7,9};
+    matrix m1a = createMatrixFromArray(values1a, 2, 2);
+    matrix m1b = createMatrixFromArray(values1b, 2, 2);
+    matrix m1c = createMatrixFromArray(values1c, 2, 2);
+    matrix m1d = createMatrixFromArray(values1d, 2, 2);
+    matrix matrices1[] = {m1a, m1b, m1c, m1d};
+
+    int values2a[] = {1, 2, 3, 4, 5, 6};
+    int values2b[] = {1, 3, 2, 4, 5, 1};
+    matrix m2a = createMatrixFromArray(values2a, 2, 3);
+    matrix m2b = createMatrixFromArray(values2b, 2, 3);
+    matrix matrices2[] = {m2a, m2b};
+
+    assert(countNonDescendingRowsMatrices(matrices1, 4) == 2);
+    assert(countNonDescendingRowsMatrices(matrices2, 2) == 1);
+}
+
 int main() {
     task1();
     task2();
@@ -597,6 +618,7 @@ int main() {
     task10();
     task11();
     task12();
+    task13();
 
     return 0;
 }
