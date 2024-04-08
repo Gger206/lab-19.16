@@ -605,6 +605,23 @@ void task13() {
     assert(countNonDescendingRowsMatrices(matrices2, 2) == 1);
 }
 
+void task14() {
+    int values1[] = {0, 1, 1, 0, 0 , 0};
+    int values2[] = {1,1,2,1,1,1};
+    int values3[] = {0,0,0,0,4,7};
+    int values4[] = {0,0,0,1,0,0};
+    int values5[] = {0,1,0,2,0,3};
+
+    matrix m1 = createMatrixFromArray(values1, 3, 2);
+    matrix m2 = createMatrixFromArray(values2, 3, 2);
+    matrix m3 = createMatrixFromArray(values3, 3, 2);
+    matrix m4 = createMatrixFromArray(values4, 3, 2);
+    matrix m5 = createMatrixFromArray(values5, 3, 2);
+
+    assert(countZeroRows(m1) == 1 && countZeroRows(m2) == 0 && countZeroRows(m3) == 2 && countZeroRows(m4) == 2 &&
+           countZeroRows(m5) == 0);
+}
+
 int main() {
     task1();
     task2();
@@ -619,6 +636,7 @@ int main() {
     task11();
     task12();
     task13();
+    task14();
 
     return 0;
 }
